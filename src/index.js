@@ -5,12 +5,14 @@
 document.getElementById("search").addEventListener("submit", function (event) {
   //Gets the value of the users input
   let input = document.getElementById("destination").value;
-
+   
+  //------------------------------------------------------------------------
+  //TASK 1
   //error checking on user input
+  //------------------------------------------------------------------------
 
   //now we need to get information from our database which is held in a json file
-  readFile();
-  alert(input);
+  readFile(input);
 
   //The following two lines prevent the page from reloading when the form is submitted
   event.preventDefault();
@@ -36,9 +38,10 @@ function readFile() {
       var countries = JSON.parse(jsonString);
       //loop through each country
       countries.forEach(function (country) {
-        // YOUR CODE HERE
-        // to make your code simpler it may be a good idea to call a function here
-        // that is written below so that the readFile() function does not become too long
+        //------------------------------------------------------------------------
+        // TASK 2 and 3
+        // you may want to create a seperate function and simply call that function here
+        //------------------------------------------------------------------------
       });
     } catch (err) {
       console.log("Error parsing JSON string:", err);
